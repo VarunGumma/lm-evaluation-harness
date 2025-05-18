@@ -1,5 +1,5 @@
 CKPT_DIR=$1
-OUTPUT_DIR=${2:-"results"}
+OUTPUT_DIR=$2
 
 mkdir -p ${OUTPUT_DIR}
 
@@ -9,5 +9,5 @@ accelerate launch -m lm_eval \
     --output_path ${OUTPUT_DIR} \
     --apply_chat_template \
     --batch_size 24 \
-    --tasks milu_flan_cot \
+    --tasks milu-core \
     --log_samples

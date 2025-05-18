@@ -1,5 +1,5 @@
 CKPT_DIR=$1
-OUTPUT_DIR=${2:-"results"}
+OUTPUT_DIR=$2
 
 mkdir -p ${OUTPUT_DIR}
 
