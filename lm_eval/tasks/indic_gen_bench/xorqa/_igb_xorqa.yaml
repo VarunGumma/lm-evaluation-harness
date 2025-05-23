@@ -14,7 +14,6 @@ task:
   - igb_xorqa_ur
 
 aggregate_metric_list:
-  - metric: acc
-    weight_by_size: false
+  - metric: f1
 metadata:
   version: 0.0

@@ -1,3 +1,0 @@
-dataset_name: Kannada
-include: _flan_cot_template_yaml
-task: milu_Kannada

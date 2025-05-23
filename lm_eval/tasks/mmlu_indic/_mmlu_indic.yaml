@@ -1,0 +1,18 @@
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+group: mmlu_indic
+metadata:
+  version: 0.0
+task:
+- mmlu_indic_Bengali
+- mmlu_indic_English
+- mmlu_indic_Gujarati
+- mmlu_indic_Hindi
+- mmlu_indic_Kannada
+- mmlu_indic_Malayalam
+- mmlu_indic_Marathi
+- mmlu_indic_Odia
+- mmlu_indic_Punjabi
+- mmlu_indic_Tamil
+- mmlu_indic_Telugu

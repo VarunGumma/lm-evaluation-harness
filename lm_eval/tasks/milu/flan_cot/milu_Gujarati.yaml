@@ -1,3 +1,0 @@
-dataset_name: Gujarati
-include: _flan_cot_template_yaml
-task: milu_Gujarati

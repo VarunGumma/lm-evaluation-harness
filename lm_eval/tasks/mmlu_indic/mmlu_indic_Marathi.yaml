@@ -1,0 +1,3 @@
+dataset_name: mr
+include: _default_template_yaml
+task: mmlu_indic_Marathi

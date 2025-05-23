@@ -9,12 +9,15 @@ def doc_to_text(line):
     D. {option4}
     """.format(
         question=line["question"],
-        option1=line["option1"],
-        option2=line["option2"],
-        option3=line["option3"],
-        option4=line["option4"],
+        option1=line["choices"][0],
+        option2=line["choices"][1],
+        option3=line["choices"][2],
+        option4=line["choices"][3],
     ).strip()
 
 
 def doc_to_target(line) -> int:
-    return int(line["target"].replace('option', '')) - 1
+    return line["answer"]
+
+def doc_to_choice(line):
+    return ["A", "B", "C", "D"]
