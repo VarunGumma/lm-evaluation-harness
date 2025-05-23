@@ -1,0 +1,3 @@
+dataset_name: te_roman
+include: _default_template_yaml
+task: mmlu_indic_Telugu_roman

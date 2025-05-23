@@ -7,8 +7,8 @@ task_name=$2
 ckpt_dir="/datadisk/storage/varunartifacts/containers/indic-phi/checkpoints/models"
 results_dir="evaluations/${temp_dir}"
 
-rm -rf logs
-mkdir -p logs
+rm -rf logs $results_dir
+mkdir -p logs $results_dir
 
 # Load from Checkpoint
 for ckpt in $(ls $ckpt_dir); do

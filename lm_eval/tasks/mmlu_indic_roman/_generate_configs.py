@@ -2,7 +2,6 @@ import yaml
 
 languages = {
     "bn": "Bengali",
-    "en": "English",
     "gu": "Gujarati",
     "hi": "Hindi",
     "kn": "Kannada",
@@ -17,20 +16,21 @@ languages = {
 task_names = []
 
 for lang_code, lang in languages.items():
+    task_name = f"mmlu_indic_{lang}_roman"
     dict_ = {
-        "dataset_name": lang_code,
+        "dataset_name": f"{lang_code}_roman",
         "include": "_default_template_yaml",
-        "task": f"mmlu_indic_{lang}",
+        "task": task_name,
     }
 
-    task_names.append(f"mmlu_indic_{lang}")
+    task_names.append(task_name)
 
-    with open(f"mmlu_indic_{lang}.yaml", "w", encoding="utf-8") as f:
+    with open(f"{task_name}.yaml", "w", encoding="utf-8") as f:
         yaml.dump(dict_, f, default_flow_style=False)
 
 
 main_config = {
-    "group": "mmlu_indic",
+    "group": "mmlu_indic_roman",
     "task": task_names,
     "aggregate_metric_list": [
         {
@@ -43,5 +43,5 @@ main_config = {
     },
 }
 
-with open("_mmlu_indic.yaml", "w", encoding="utf-8") as f:
+with open("_mmlu_indic_roman.yaml", "w", encoding="utf-8") as f:
     yaml.dump(main_config, f, default_flow_style=False)

@@ -6,6 +6,7 @@
 # bash run.sh igb/flores_xxen igb_flores_xxen
 # bash run.sh igb/flores_enxx igb_flores_enxx
 
+bash run.sh mmlu-indic-roman mmlu_indic_roman
 bash run.sh mmlu-indic mmlu_indic
 
-# cp -r evaluations/ /datadisk/storage/varunartifacts/containers/indic-phi/checkpoints
+cp -r evaluations/mmlu* /datadisk/storage/varunartifacts/containers/indic-phi/checkpoints/evaluations

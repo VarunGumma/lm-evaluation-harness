@@ -1,0 +1,17 @@
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+group: mmlu_indic_roman
+metadata:
+  version: 0.0
+task:
+- mmlu_indic_Bengali_roman
+- mmlu_indic_Gujarati_roman
+- mmlu_indic_Hindi_roman
+- mmlu_indic_Kannada_roman
+- mmlu_indic_Malayalam_roman
+- mmlu_indic_Marathi_roman
+- mmlu_indic_Odia_roman
+- mmlu_indic_Punjabi_roman
+- mmlu_indic_Tamil_roman
+- mmlu_indic_Telugu_roman
