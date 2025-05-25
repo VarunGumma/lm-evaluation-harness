@@ -19,6 +19,6 @@ accelerate launch \
     --model_args "pretrained=${CKPT_DIR},max_length=8192,parallelize=False,dtype=bfloat16,attn_implementation=flash_attention_2" \
     --output_path ${OUTPUT_DIR} \
     --apply_chat_template \
-    --batch_size 16 \
+    --batch_size auto:40 \
     --tasks ${TASK_NAME} \
     --log_samples

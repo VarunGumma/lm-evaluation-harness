@@ -6,9 +6,8 @@ metric_list:
     aggregation: mean
     higher_is_better: true
 process_docs: !function utils.process_docs
-doc_to_text: !function utils.doc_to_text
-doc_to_target: !function utils.doc_to_target
-doc_to_choice: !function utils.doc_to_choice
-description: "You are a helpful and factual AI Assistant. The following is a Multiple Choice Question (MCQ). Now, choose the correct option."
+doc_to_text: "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\nD. {{choices[3]}}\nAnswer:"
+doc_to_choice: ["A", "B", "C", "D"]
+doc_to_target: answer
 metadata:
   version: 0.0

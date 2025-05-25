@@ -5,8 +5,8 @@ dataset_path: VarunGumma/IGB_XQuAD
 output_type: generate_until
 test_split: test
 gen_prefix: "## Answer: "
-doc_to_text: !function utils.doc_to_text
-doc_to_target: !function utils.doc_to_target
+doc_to_text: "## Context: {{ context }}\n\n## Question: {{ question }}"
+doc_to_target: "{{ answers[0]['text'] }}"
 process_results: !function utils.process_results_qa
 description: "You are a helpful and factual AI Assistant. The following is a Question-Answering task in {{ lang }}. Now, find the exact answer to question based on the context provided."
 generation_kwargs:
