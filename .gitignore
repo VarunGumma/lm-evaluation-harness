@@ -26,4 +26,5 @@ lm_eval/caching/.cache
 wandb
 examples/wandb
 custom_eval/logs
-custom_eval/results
+custom_eval/plots
+custom_eval/evaluations

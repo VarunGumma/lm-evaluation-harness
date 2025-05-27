@@ -1,0 +1,18 @@
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+group: arc_c_indic
+metadata:
+  version: 0.0
+task:
+- arc_c_indic_bn
+- arc_c_indic_en
+- arc_c_indic_gu
+- arc_c_indic_hi
+- arc_c_indic_kn
+- arc_c_indic_ml
+- arc_c_indic_mr
+- arc_c_indic_or
+- arc_c_indic_pa
+- arc_c_indic_ta
+- arc_c_indic_te

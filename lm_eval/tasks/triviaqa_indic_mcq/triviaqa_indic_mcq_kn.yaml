@@ -1,0 +1,3 @@
+dataset_name: kn
+include: _default_template_yaml
+task: triviaqa_indic_mcq_kn

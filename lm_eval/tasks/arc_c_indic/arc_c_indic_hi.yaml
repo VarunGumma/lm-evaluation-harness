@@ -1,0 +1,3 @@
+dataset_name: hi
+include: _default_template_yaml
+task: arc_c_indic_hi

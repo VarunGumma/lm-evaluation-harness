@@ -1,0 +1,18 @@
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+group: triviaqa_indic_mcq
+metadata:
+  version: 0.0
+task:
+- triviaqa_indic_mcq_bn
+- triviaqa_indic_mcq_en
+- triviaqa_indic_mcq_gu
+- triviaqa_indic_mcq_hi
+- triviaqa_indic_mcq_kn
+- triviaqa_indic_mcq_ml
+- triviaqa_indic_mcq_mr
+- triviaqa_indic_mcq_or
+- triviaqa_indic_mcq_pa
+- triviaqa_indic_mcq_ta
+- triviaqa_indic_mcq_te

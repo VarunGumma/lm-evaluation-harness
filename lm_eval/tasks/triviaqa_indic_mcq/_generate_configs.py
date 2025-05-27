@@ -1,21 +1,11 @@
-import yaml
+import yaml 
 
 languages = [
-    "Bengali",
-    "English",
-    "Gujarati",
-    "Hindi",
-    "Kannada",
-    "Malayalam",
-    "Marathi",
-    "Odia",
-    "Punjabi",
-    "Tamil",
-    "Telugu",
+    "bn", "en", "gu", "hi", "kn", "ml", "mr", "or", "pa", "ta", "te"
 ]
 
 task_names = []
-prefix = "milu"
+prefix = "triviaqa_indic_mcq"
 
 for lang in languages:
     dict_ = {
