@@ -1,14 +1,9 @@
-tag:
-  - math_word_problems
-task: gsm8k
-dataset_path: gsm8k
-dataset_name: main
+dataset_path: sarvamai/gsm8k-indic
 output_type: generate_until
-training_split: train
-fewshot_split: train
 test_split: test
+description: "You are a helpful and factual Math AI Assistant. Think step-by-step, and then provide the final numerical answer preceded by ####. For example: #### 42"
 doc_to_text: "Question: {{question}}\nAnswer:"
-doc_to_target: "{{answer}}" #" {{answer.split('### ')[-1].rstrip()}}"
+doc_to_target: "{{answer.split('\n#### ')[-1].strip()}}"
 metric_list:
   - metric: exact_match
     aggregation: mean
@@ -27,8 +22,6 @@ generation_kwargs:
     - "<|im_end|>"
   do_sample: false
   temperature: 0.0
-repeats: 1
-num_fewshot: 5
 filter_list:
   - name: "strict-match"
     filter:

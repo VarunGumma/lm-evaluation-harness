@@ -1,0 +1,3 @@
+dataset_name: gu
+include: _default_template_yaml
+task: gsm8k_indic_gu

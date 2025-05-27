@@ -1,0 +1,3 @@
+include: _default_template_yaml
+task: boolq_indic_ta
+process_docs: !function utils.process_docs_ta

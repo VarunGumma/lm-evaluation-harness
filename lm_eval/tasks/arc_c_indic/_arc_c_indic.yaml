@@ -1,6 +1,8 @@
 aggregate_metric_list:
 - metric: acc
   weight_by_size: true
+- metric: acc_norm
+  weight_by_size: true
 group: arc_c_indic
 metadata:
   version: 0.0

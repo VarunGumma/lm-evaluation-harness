@@ -8,6 +8,7 @@ metric_list:
   - metric: acc
     aggregation: mean
     higher_is_better: true
+description: "You are a helpful and factual AI Assistant. The following is a Multiple Choice Question (MCQ) about {{ subject }} ({{ domain }}) in {{ language }}. Now, choose the correct option."
 doc_to_text: "{{question.strip()}}\nA. {{option1}}\nB. {{option2}}\nC. {{option3}}\nD. {{option4}}\nAnswer:"
 doc_to_target: "{{ target.replace('option', '') | int - 1 }}"
 doc_to_choice: ["A", "B", "C", "D"]

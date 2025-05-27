@@ -1,0 +1,20 @@
+aggregate_metric_list:
+- aggregation: mean
+  metric: acc
+- aggregation: mean
+  metric: acc_norm
+group: boolq_indic
+metadata:
+  version: 1.0
+task:
+- boolq_indic_bn
+- boolq_indic_en
+- boolq_indic_gu
+- boolq_indic_hi
+- boolq_indic_kn
+- boolq_indic_ml
+- boolq_indic_mr
+- boolq_indic_or
+- boolq_indic_pa
+- boolq_indic_ta
+- boolq_indic_te

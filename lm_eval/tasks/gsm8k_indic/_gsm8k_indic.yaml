@@ -1,0 +1,15 @@
+group: gsm8k_indic
+metadata:
+  version: 0.0
+task:
+- gsm8k_indic_bn
+- gsm8k_indic_en
+- gsm8k_indic_gu
+- gsm8k_indic_hi
+- gsm8k_indic_kn
+- gsm8k_indic_ml
+- gsm8k_indic_mr
+- gsm8k_indic_or
+- gsm8k_indic_pa
+- gsm8k_indic_ta
+- gsm8k_indic_te

@@ -2,6 +2,7 @@ task: trivia_qa_indic_mcq
 dataset_path: sarvamai/trivia-qa-indic-mcq
 output_type: multiple_choice
 test_split: validation
+description: "You are a helpful and factual AI Assistant. Read the following Multiple Choice Question (MCQ) and choose the correct option."
 doc_to_text: "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\nD. {{choices[3]}}\nAnswer:"
 doc_to_choice: ["A", "B", "C", "D"]
 doc_to_target: answer
