@@ -41,7 +41,7 @@ from lm_eval.models.utils import (
 
 
 eval_logger = logging.getLogger(__name__)
-
+torch.set_float32_matmul_precision('high')
 
 @register_model("hf-auto", "hf", "huggingface")
 class HFLM(TemplateLM):
@@ -1418,6 +1418,7 @@ class HFLM(TemplateLM):
             chat_templated = self.tokenizer.apply_chat_template(
                 chat_history,
                 tokenize=False,
+                enable_thinking=False,
                 add_generation_prompt=add_generation_prompt,
                 continue_final_message=not add_generation_prompt,
             )
@@ -1429,6 +1430,7 @@ class HFLM(TemplateLM):
             chat_templated = self.tokenizer.apply_chat_template(
                 chat_history,
                 tokenize=False,
+                enable_thinking=False,
                 add_generation_prompt=add_generation_prompt,
                 continue_final_message=not add_generation_prompt,
             )

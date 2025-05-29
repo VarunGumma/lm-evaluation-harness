@@ -1,9 +1,9 @@
 dataset_path: sarvamai/gsm8k-indic
 output_type: generate_until
 test_split: test
-description: "You are a helpful and factual Math AI Assistant. Think step-by-step, and then provide the final numerical answer preceded by ####. For example: #### 42"
-doc_to_text: "Question: {{question}}\nAnswer:"
+description: "You are a helpful and factual Math AI Assistant. Think step-by-step and solve the problem. Provide the final numerical answer preceeded by ####. For example: #### 42"
 doc_to_target: "{{answer.split('\n#### ')[-1].strip()}}"
+doc_to_text: "Question: {{question}}\nAnswer:"
 metric_list:
   - metric: exact_match
     aggregation: mean
@@ -17,22 +17,26 @@ metric_list:
       - "\\.$"
 generation_kwargs:
   until:
-    - "Question:"
+    - "Sure"
+    - "sure"
+    - "Question"
+    - "question"
     - "</s>"
     - "<|im_end|>"
   do_sample: false
-  temperature: 0.0
+  max_new_tokens: 256
+repeats: 1
 filter_list:
   - name: "strict-match"
     filter:
       - function: "regex"
         regex_pattern: "#### (\\-?[0-9\\.\\,]+)"
-      - function: "take_first"
+      - function: "take_last"
   - name: "flexible-extract"
     filter:
       - function: "regex"
         group_select: -1
         regex_pattern: "(-?[$0-9.,]{2,})|(-?[0-9]+)"
-      - function: "take_first"
+      - function: "take_last"
 metadata:
   version: 0.0

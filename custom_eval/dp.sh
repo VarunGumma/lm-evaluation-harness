@@ -16,9 +16,10 @@ mkdir -p ${OUTPUT_DIR}
 accelerate launch \
     -m lm_eval \
     --model hf \
-    --model_args "pretrained=${CKPT_DIR},max_length=8192,parallelize=False,dtype=bfloat16,attn_implementation=flash_attention_2" \
+    --model_args "pretrained=${CKPT_DIR},parallelize=False,dtype=bfloat16,attn_implementation=sdpa" \
     --output_path ${OUTPUT_DIR} \
     --apply_chat_template \
     --batch_size auto:40 \
     --tasks ${TASK_NAME} \
-    --log_samples
+    --log_samples \
+    --limit 128

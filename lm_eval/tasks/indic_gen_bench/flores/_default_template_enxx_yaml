@@ -11,9 +11,9 @@ generation_kwargs:
   until:
     - "\n"
   do_sample: false
-  temperature: 0.0
+  max_new_tokens: 512
 metadata:
   version: 0.0
-doc_to_text: "{{ source }}"
-doc_to_target: "{{ target }}"
+doc_to_text: source
+doc_to_target: target
 description: "You are a helpful and factual AI Assistant. Translate the following sentence from {{ translation_direction_verbalized }}."

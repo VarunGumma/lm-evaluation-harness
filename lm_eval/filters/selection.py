@@ -40,6 +40,36 @@ class TakeKFilter(Filter):
         return map(lambda r: r[: self.k], resps)
 
 
+@register_filter("take_last")
+class TakeLastFilter(Filter):
+    def __init__(self) -> None:
+        """
+        Can define custom behavior here, if an individual instantiation of a Filter class should have state.
+        """
+
+    def apply(self, resps, docs):
+        """
+        Assuming each entry of `resps` is a list of model responses, we discard all but the last response.
+        """
+        return map(lambda r: r[-1], resps)
+
+
+@register_filter("take_last_k")
+class TakeLastKFilter(Filter):
+    def __init__(self, **kwargs) -> None:
+        self.k = kwargs.pop("k")
+        super().__init__(**kwargs)
+
+    def apply(self, resps, docs):
+        # need resp to be subscriptable to check below
+        resps = list(resps)
+        # check we have at least k responses per doc, else we can't take the last k
+        assert len(resps[0]) >= self.k, (
+            f"Need at least {self.k} responses per doc to take last {self.k}, but got {len(resps[0])} only! Please increase TaskConfig.repeats ."
+        )
+        return map(lambda r: r[-self.k:], resps)
+
+
 @register_filter("majority_vote")
 class MajorityVoteFilter(Filter):
     def __init__(self) -> None:

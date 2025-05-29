@@ -3,6 +3,7 @@ import json
 import logging
 import os
 import sys
+import torch
 from functools import partial
 from pathlib import Path
 from typing import Union
@@ -17,6 +18,7 @@ from lm_eval.utils import (
     simple_parse_args_string,
 )
 
+torch.set_float32_matmul_precision('high')
 
 def try_parse_json(value: str) -> Union[str, dict, None]:
     if value is None:

@@ -1,5 +1,6 @@
 export NCCL_SOCKET_IFNAME=lo
 export NCCL_DEBUG=WARN
+export TRANSFORMERS_VERBOSITY=error
 
 temp_dir=$1
 task_name=$2

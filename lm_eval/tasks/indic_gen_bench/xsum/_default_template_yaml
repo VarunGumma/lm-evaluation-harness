@@ -10,10 +10,9 @@ generation_kwargs:
   until:
     - "\n"
   do_sample: false
-  temperature: 0.0
+  max_new_tokens: 512
 metadata:
   version: 0.0
-doc_to_text: "## Passage: {{ text }}"
-doc_to_target: "{{ summary }}"
-gen_prefix: "## Summary: "
+doc_to_text: "## Passage: {{ text }}\n\n## Summary:"
+doc_to_target: summary
 description: "You are a helpful and factual AI Assistant. Generate a concise summary of the give passage in {{ lang }}."

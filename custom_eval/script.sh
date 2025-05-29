@@ -8,11 +8,11 @@
 # bash run.sh igb/flores_xxen igb_flores_xxen
 # bash run.sh igb/flores_enxx igb_flores_enxx
 
-bash run.sh milu milu
-bash run.sh triviaqa_indic_mcq triviaqa_indic_mcq
-bash run.sh arc_c_indic arc_c_indic
-# bash run.sh gsm8k_indic gsm8k_indic
-bash run.sh boolq_indic boolq_indic
+# bash run.sh milu milu
+# bash run.sh triviaqa_indic_mcq triviaqa_indic_mcq
+# bash run.sh arc_c_indic arc_c_indic
+bash run.sh gsm8k_indic gsm8k_indic
+# bash run.sh boolq_indic boolq_indic
 
-rm -rf /datadisk/storage/varunartifacts/containers/indic-phi/checkpoints/evaluations
-cp -r evaluations /datadisk/storage/varunartifacts/containers/indic-phi/checkpoints
+# rm -rf /datadisk/storage/varunartifacts/containers/indic-phi/checkpoints/evaluations
+cp -r evaluations/gsm8k_indic /datadisk/storage/varunartifacts/containers/indic-phi/checkpoints/evaluations
