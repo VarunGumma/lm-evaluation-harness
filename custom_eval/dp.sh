@@ -21,5 +21,4 @@ accelerate launch \
     --apply_chat_template \
     --batch_size auto:40 \
     --tasks ${TASK_NAME} \
-    --log_samples \
-    --limit 128
+    --log_samples 

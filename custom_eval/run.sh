@@ -41,9 +41,9 @@ echo "Running model: meta-llama/Llama-3.3-70B-Instruct on task: ${task_name}"
 bash dp.sh "meta-llama/Llama-3.3-70B-Instruct" $results_dir $task_name \
     > logs/llama_3.3_70b.log 2>&1
 
-echo "Running model: meta-llama/Llama-3.1-405B-Instruct on task: ${task_name}"
-bash dp_mp.sh "meta-llama/Llama-3.1-405B-Instruct" $results_dir $task_name \
-    > logs/llama_3.1_405b.log 2>&1
+# echo "Running model: meta-llama/Llama-3.1-405B-Instruct on task: ${task_name}"
+# bash dp_mp.sh "meta-llama/Llama-3.1-405B-Instruct" $results_dir $task_name \
+#     > logs/llama_3.1_405b.log 2>&1
 
 echo "Running model: google/gemma-3-1b-it on task: ${task_name}"
 bash dp.sh "google/gemma-3-1b-it" $results_dir $task_name \

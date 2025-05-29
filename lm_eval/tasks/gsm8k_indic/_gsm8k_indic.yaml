@@ -13,3 +13,6 @@ task:
 - gsm8k_indic_pa
 - gsm8k_indic_ta
 - gsm8k_indic_te
+aggregate_metric_list:
+- metric: exact_match
+
