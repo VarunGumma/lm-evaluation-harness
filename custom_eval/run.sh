@@ -80,3 +80,7 @@ bash dp.sh "CohereLabs/aya-expanse-32b" $results_dir $task_name \
 echo "Running model: VarunGumma/Mistral-Small-3.1-24B-Instruct-2503-LM-HF on task: ${task_name}"
 bash dp.sh "VarunGumma/Mistral-Small-3.1-24B-Instruct-2503-LM-HF" $results_dir $task_name \
     > logs/mistral_small_3.1_24b.log 2>&1
+
+echo "Running model: sarvamai/sarvam-m on task: ${task_name}"
+bash dp.sh "sarvamai/sarvam-m" $results_dir $task_name \
+    > logs/sarvam_m.log 2>&1
