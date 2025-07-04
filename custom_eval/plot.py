@@ -5,22 +5,24 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
 from collections import defaultdict
+from matplotlib.patches import Patch
 from typing import Dict, List, Tuple, Set, Any
 
 # Configuration
+BASE_DIR = "/scratch/amlt_code/evaluations"
 SCORE_NAMES = {
-    "evaluations/milu": ("milu", "acc,none"),
-    "evaluations/arc_c_indic": ("arc_c_indic", "acc,none"),
-    "evaluations/boolq_indic": ("boolq_indic", "acc,none"),
-    "evaluations/triviaqa_indic_mcq": ("triviaqa_indic_mcq", "acc,none"),
-    "evaluations/mmlu": ("mmlu", "acc,none"),
-    "evaluations/mmlu_indic": ("mmlu_indic", "acc,none"),
-    "evaluations/mmlu_indic_roman": ("mmlu_indic_roman", "acc,none"),
-    "evaluations/igb/xsum": ("igb_xsum", "chrf,none"),
-    "evaluations/igb/xquad": ("igb_xquad", "f1,none"),
-    "evaluations/igb/xorqa": ("igb_xorqa", "f1,none"),
-    "evaluations/igb/flores_xxen": ("igb_flores_xxen", "chrf,none"),
-    "evaluations/igb/flores_enxx": ("igb_flores_enxx", "chrf,none"),
+    f"{BASE_DIR}/milu": ("milu", "acc,none"),
+    f"{BASE_DIR}/arc_c_indic": ("arc_c_indic", "acc,none"),
+    f"{BASE_DIR}/boolq_indic": ("boolq_indic", "acc,none"),
+    f"{BASE_DIR}/triviaqa_indic_mcq": ("triviaqa_indic_mcq", "acc,none"),
+    f"{BASE_DIR}/mmlu": ("mmlu", "acc,none"),
+    f"{BASE_DIR}/mmlu_indic": ("mmlu_indic", "acc,none"),
+    f"{BASE_DIR}/mmlu_indic_roman": ("mmlu_indic_roman", "acc,none"),
+    f"{BASE_DIR}/igb/xsum": ("igb_xsum", "chrf,none"),
+    f"{BASE_DIR}/igb/xquad": ("igb_xquad", "f1,none"),
+    f"{BASE_DIR}/igb/xorqa": ("igb_xorqa", "f1,none"),
+    f"{BASE_DIR}/igb/flores_xxen": ("igb_flores_xxen", "chrf,none"),
+    f"{BASE_DIR}/igb/flores_enxx": ("igb_flores_enxx", "chrf,none"),
 }
 
 MODEL_NAMES = {
@@ -35,6 +37,8 @@ COLORS = ['#4285F4', '#EA4335', '#FBBC04', '#34A853', '#9C27B0',
           '#AB47BC', '#FF5722']
 
 OUTPUT_DIR = "plots"
+UPDESH_HATCH = "oo"
+CUSTOM_HATCH = "XX"
 
 
 def setup_output_directory():
@@ -395,9 +399,9 @@ def create_individual_bar_plots(all_data: Dict, model_color_map: Dict):
             
             # Determine hatch pattern
             if dataset.startswith("updesh"):
-                hatches.append('\\\\')  # Backward diagonal lines for updesh datasets
+                hatches.append(UPDESH_HATCH)  # Backward diagonal lines for updesh datasets
             elif is_custom:
-                hatches.append('//')  # Forward diagonal lines for custom models
+                hatches.append(CUSTOM_HATCH)  # Forward diagonal lines for custom models
             else:
                 hatches.append(None)
         
@@ -438,9 +442,9 @@ def create_individual_bar_plots(all_data: Dict, model_color_map: Dict):
             legend_handles.append(ax.get_legend_handles_labels()[0][0])
         
         # Add hatch patterns to legend
-        custom_patch = Patch(facecolor='gray', edgecolor='black', hatch='//', 
+        custom_patch = Patch(facecolor='gray', edgecolor='black', hatch=CUSTOM_HATCH, 
                            alpha=0.8, label='Custom Model')
-        updesh_patch = Patch(facecolor='gray', edgecolor='black', hatch='\\\\', 
+        updesh_patch = Patch(facecolor='gray', edgecolor='black', hatch=UPDESH_HATCH, 
                            alpha=0.8, label='Updesh Dataset')
         
         legend_handles.extend([custom_patch, updesh_patch])
@@ -487,10 +491,9 @@ def create_combined_bar_plot(all_data: Dict, model_color_map: Dict):
         axes[idx].axis('off')
     
     # Add legend
-    from matplotlib.patches import Patch
-    custom_patch = Patch(facecolor='gray', edgecolor='black', hatch='//', 
+    custom_patch = Patch(facecolor='gray', edgecolor='black', hatch=CUSTOM_HATCH, 
                         alpha=0.8, label='Custom Model')
-    updesh_patch = Patch(facecolor='gray', edgecolor='black', hatch='\\\\', 
+    updesh_patch = Patch(facecolor='gray', edgecolor='black', hatch=UPDESH_HATCH, 
                         alpha=0.8, label='Updesh Dataset')
     fig.legend(handles=[custom_patch, updesh_patch], loc='lower center', 
               bbox_to_anchor=(0.5, -0.02), ncol=2, fontsize=10)
