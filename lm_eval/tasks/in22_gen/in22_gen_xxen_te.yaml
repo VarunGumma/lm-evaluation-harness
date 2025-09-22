@@ -1,0 +1,3 @@
+include: _default_template_xxen_yaml
+task: in22_gen_xxen_te
+test_split: te

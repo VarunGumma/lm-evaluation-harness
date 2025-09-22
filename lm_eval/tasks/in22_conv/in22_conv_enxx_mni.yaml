@@ -1,0 +1,3 @@
+include: _default_template_enxx_yaml
+task: in22_conv_enxx_mni
+test_split: mni

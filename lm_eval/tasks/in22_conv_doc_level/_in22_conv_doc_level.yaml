@@ -1,0 +1,9 @@
+group: in22_conv_doc_level
+task:
+  - in22_conv_doc_level_xxen
+  - in22_conv_doc_level_enxx
+aggregate_metric_list:
+  - metric: chrf
+  - metric: bleu
+metadata:
+  version: 0

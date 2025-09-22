@@ -1,0 +1,18 @@
+group: mifeval
+task:
+  - mifeval_en
+  - mifeval_asm
+  - mifeval_ben
+  - mifeval_guj
+  - mifeval_hin
+  - mifeval_kan
+  - mifeval_mal
+  - mifeval_mar
+  - mifeval_nep
+  - mifeval_odi
+  - mifeval_pan
+  - mifeval_tam
+  - mifeval_tel
+  - mifeval_urd
+metadata:
+  version: 4.0

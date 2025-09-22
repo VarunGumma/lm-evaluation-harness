@@ -1,0 +1,15 @@
+dataset_path: manan-u/in22_conv_xxen
+output_type: generate_until
+metric_list:
+  - metric: chrf
+  - metric: bleu
+generation_kwargs:
+  until:
+    - "\n"
+  do_sample: false
+  max_new_tokens: 4096
+metadata:
+  version: 0.0
+doc_to_text: source
+doc_to_target: target
+description: "You are a helpful and factual AI Assistant. Translate the following sentence from {{ translation_direction_verbalized }}."

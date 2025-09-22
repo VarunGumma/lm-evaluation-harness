@@ -1,0 +1,18 @@
+group: mifbench_native
+task:
+  - mifbench_native_en
+  - mifbench_native_asm
+  - mifbench_native_ben
+  - mifbench_native_guj
+  - mifbench_native_hin
+  - mifbench_native_kan
+  - mifbench_native_mal
+  - mifbench_native_mar
+  - mifbench_native_nep
+  - mifbench_native_odi
+  - mifbench_native_pan
+  - mifbench_native_tam
+  - mifbench_native_tel
+  - mifbench_native_urd
+metadata:
+  version: 4.0

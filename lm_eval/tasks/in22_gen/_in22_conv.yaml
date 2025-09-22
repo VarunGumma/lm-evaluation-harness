@@ -1,0 +1,9 @@
+group: in22_gen
+task:
+  - in22_gen_enxx
+  - in22_gen_xxen
+aggregate_metric_list:
+  - metric: chrf
+  - metric: bleu
+metadata:
+  version: 0

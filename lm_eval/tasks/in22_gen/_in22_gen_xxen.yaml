@@ -1,0 +1,29 @@
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+group: in22_gen_xxen
+metadata:
+  version: 0.0
+task:
+- in22_gen_xxen_as
+- in22_gen_xxen_bn
+- in22_gen_xxen_brx
+- in22_gen_xxen_doi
+- in22_gen_xxen_gom
+- in22_gen_xxen_gu
+- in22_gen_xxen_hi
+- in22_gen_xxen_kn
+- in22_gen_xxen_ks
+- in22_gen_xxen_mai
+- in22_gen_xxen_ml
+- in22_gen_xxen_mni
+- in22_gen_xxen_mr
+- in22_gen_xxen_ne
+- in22_gen_xxen_or
+- in22_gen_xxen_pa
+- in22_gen_xxen_sa
+- in22_gen_xxen_sat
+- in22_gen_xxen_sd
+- in22_gen_xxen_ta
+- in22_gen_xxen_te
+- in22_gen_xxen_ur

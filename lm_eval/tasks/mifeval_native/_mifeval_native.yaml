@@ -1,0 +1,18 @@
+group: mifeval_native
+task:
+  - mifeval_native_en
+  - mifeval_native_asm
+  - mifeval_native_ben
+  - mifeval_native_guj
+  - mifeval_native_hin
+  - mifeval_native_kan
+  - mifeval_native_mal
+  - mifeval_native_mar
+  - mifeval_native_nep
+  - mifeval_native_odi
+  - mifeval_native_pan
+  - mifeval_native_tam
+  - mifeval_native_tel
+  - mifeval_native_urd
+metadata:
+  version: 4.0

@@ -1,0 +1,18 @@
+group: mifbench
+task:
+  - mifbench_en
+  - mifbench_asm
+  - mifbench_ben
+  - mifbench_guj
+  - mifbench_hin
+  - mifbench_kan
+  - mifbench_mal
+  - mifbench_mar
+  - mifbench_nep
+  - mifbench_odi
+  - mifbench_pan
+  - mifbench_tam
+  - mifbench_tel
+  - mifbench_urd
+metadata:
+  version: 4.0

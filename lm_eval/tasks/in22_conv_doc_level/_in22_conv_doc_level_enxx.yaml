@@ -1,0 +1,29 @@
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+group: in22_conv_doc_level_enxx
+metadata:
+  version: 0.0
+task:
+- in22_conv_doc_level_enxx_as
+- in22_conv_doc_level_enxx_bn
+- in22_conv_doc_level_enxx_brx
+- in22_conv_doc_level_enxx_doi
+- in22_conv_doc_level_enxx_gom
+- in22_conv_doc_level_enxx_gu
+- in22_conv_doc_level_enxx_hi
+- in22_conv_doc_level_enxx_kn
+- in22_conv_doc_level_enxx_ks
+- in22_conv_doc_level_enxx_mai
+- in22_conv_doc_level_enxx_ml
+- in22_conv_doc_level_enxx_mni
+- in22_conv_doc_level_enxx_mr
+- in22_conv_doc_level_enxx_ne
+- in22_conv_doc_level_enxx_or
+- in22_conv_doc_level_enxx_pa
+- in22_conv_doc_level_enxx_sa
+- in22_conv_doc_level_enxx_sat
+- in22_conv_doc_level_enxx_sd
+- in22_conv_doc_level_enxx_ta
+- in22_conv_doc_level_enxx_te
+- in22_conv_doc_level_enxx_ur

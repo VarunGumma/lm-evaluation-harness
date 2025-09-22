@@ -1,0 +1,29 @@
+aggregate_metric_list:
+- metric: acc
+  weight_by_size: true
+group: in22_gen_enxx
+metadata:
+  version: 0.0
+task:
+- in22_gen_enxx_as
+- in22_gen_enxx_bn
+- in22_gen_enxx_brx
+- in22_gen_enxx_doi
+- in22_gen_enxx_gom
+- in22_gen_enxx_gu
+- in22_gen_enxx_hi
+- in22_gen_enxx_kn
+- in22_gen_enxx_ks
+- in22_gen_enxx_mai
+- in22_gen_enxx_ml
+- in22_gen_enxx_mni
+- in22_gen_enxx_mr
+- in22_gen_enxx_ne
+- in22_gen_enxx_or
+- in22_gen_enxx_pa
+- in22_gen_enxx_sa
+- in22_gen_enxx_sat
+- in22_gen_enxx_sd
+- in22_gen_enxx_ta
+- in22_gen_enxx_te
+- in22_gen_enxx_ur

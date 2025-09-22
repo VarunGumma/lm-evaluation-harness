@@ -1,0 +1,3 @@
+include: _default_template_enxx_yaml
+task: in22_gen_enxx_kn
+test_split: kn
